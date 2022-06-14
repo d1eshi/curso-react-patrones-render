@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react'
 
 export const TodoHeader = ({ children, loading }) => {
@@ -13,6 +14,8 @@ export const TodoHeader = ({ children, loading }) => {
   )
 }
 =======
+=======
+>>>>>>> 37d48dc55010d4a1c9a2d5c83f033f0d8268415b
 import React from 'react';
 
 function TodoHeader({ children, loading }) {
@@ -28,4 +31,7 @@ function TodoHeader({ children, loading }) {
 }
 
 export { TodoHeader };
+<<<<<<< HEAD
+>>>>>>> 37d48dc55010d4a1c9a2d5c83f033f0d8268415b
+=======
 >>>>>>> 37d48dc55010d4a1c9a2d5c83f033f0d8268415b
