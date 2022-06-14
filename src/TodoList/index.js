@@ -3,9 +3,16 @@ import './TodoList.css'
 
 function TodoList(props) {
   return (
-    <section>
+    <section className='TodoList-container'>
+      {props.error && props.onError()}
+      {props.loading && props.onLoading()}
+
+
+      {(!props.loading && !props.totalTodos) && props.onEmptyTodos()}
+      {(!!props.totalTodos && !props.searchedTodos.length) && props.onEmptySearchResults(props.searchValue)}
+
       <ul>
-        {props.children}
+        {(!props.loading && !props.error) && props.searchedTodos.map(props.children ?? props.render)}
       </ul>
     </section>
   );
