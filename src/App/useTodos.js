@@ -52,11 +52,11 @@ function useTodos() {
 <<<<<<< HEAD:src/Hooks/useTodos.js
 
   return ({
-=======
-  
-  return {
->>>>>>> 37d48dc55010d4a1c9a2d5c83f033f0d8268415b:src/App/useTodos.js
-    loading,
+
+
+    return {
+: src/ App / useTodos.js
+      loading,
     error,
     totalTodos,
     completedTodos,
@@ -71,10 +71,10 @@ function useTodos() {
 <<<<<<< HEAD:src/Hooks/useTodos.js
     sincronizeTodos
   })
-=======
-    sincronizeTodos,
+
+  sincronizeTodos,
   };
->>>>>>> 37d48dc55010d4a1c9a2d5c83f033f0d8268415b:src/App/useTodos.js
+: src / App / useTodos.js
 }
 
 export { useTodos };
