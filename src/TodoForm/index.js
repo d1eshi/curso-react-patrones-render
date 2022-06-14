@@ -1,9 +1,17 @@
 import React from 'react';
+<<<<<<< HEAD
 import { useTodos } from '../Hooks/useTodos';
 import './TodoForm.css';
 
 function TodoForm({ setOpenModal, addTodo }) {
   const [newTodoValue, setNewTodoValue] = React.useState('');
+=======
+import './TodoForm.css';
+
+function TodoForm({ addTodo, setOpenModal }) {
+  const [newTodoValue, setNewTodoValue] = React.useState('');
+
+>>>>>>> 37d48dc55010d4a1c9a2d5c83f033f0d8268415b
   const onChange = (event) => {
     if (event.target.value === '') return
     setNewTodoValue(event.target.value);

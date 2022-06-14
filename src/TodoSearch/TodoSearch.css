@@ -26,3 +26,7 @@
   /* outline-color: #61DAFA; */
   opacity: 30%;
 }
+
+.TodoSearch:disabled {
+  opacity: 25%;
+}
