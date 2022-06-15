@@ -1,24 +1,31 @@
-import React from 'react';
+import React from 'react'
 
 function useStorageListener(sincronize) {
-  const [storageChange, setStorageChange] = React.useState(false);
-  
-  window.addEventListener('storage', (change) => {
-    if (change.key === 'TODOS_V1') {
-      console.log('Hubo cambios en TODOS_V1');
-      setStorageChange(true);
+  const [storageChange, setStorageChange] = React.useState(false)
+
+  React.useEffect(() => {
+    const thereChangesAtStorage = (obj) => {
+      if (obj.key === 'TODOS_V1') {
+        console.log('Hubo cambios en todos_v1');
+        setStorageChange(!storageChange)
+      }
     }
-  });
+
+    window.addEventListener('storage', thereChangesAtStorage)
+    return () => window.removeEventListener('storage', thereChangesAtStorage)
+  }, [])
 
   const toggleShow = () => {
-    sincronize();
-    setStorageChange(false);
-  };
+    sincronize()
+    setStorageChange(false)
+  }
 
   return {
     show: storageChange,
-    toggleShow,
-  };
+    toggleShow
+  }
 }
 
-export { useStorageListener };
+export { useStorageListener }
+
+
